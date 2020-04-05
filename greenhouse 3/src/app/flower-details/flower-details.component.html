@@ -1,0 +1,47 @@
+<div class="header">
+    <div class="header_img"><img src="{{ flower.image }}" alt=""></div>
+    <div class="header_text">
+        <div class="header_text__title">{{ flower.name }}</div>
+        <div class="header_text__price">{{ flower.price }} ₸    </div>
+        <div class="header_text__description">{{ flower.description }}</div>
+    </div>
+    <div class="header_offer">
+        <form>
+            <div class="item">
+                Имя
+                <input type="text">
+            </div>
+            <div class="item">
+                Номер телефона
+                <input type="text">
+            </div>
+            <button>Заказать цветы</button>
+        </form>
+    </div>
+</div>
+<div class="content">
+    <div class="content_item">
+        <div class="title">Освещение</div>
+        {{ flower.light }}
+    </div>
+    <div class="content_item">
+        <div class="title">Температура</div>
+        {{ flower.temp }}
+    </div>
+    <div class="content_item">
+        <div class="title">Влажность</div>
+        {{ flower.humidity }}
+    </div>
+    <div class="content_item">
+        <div class="title">Полив</div>
+        {{ flower.watering }}
+    </div>
+    <div class="content_item">
+        <div class="title">Подкормка</div>
+        {{ flower.fertilizer }}
+    </div>
+    <div class="content_item">
+        <div class="title">Пересадка</div>
+        {{ flower.transplantation }}
+    </div>
+</div>

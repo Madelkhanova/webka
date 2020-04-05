@@ -1,0 +1,16 @@
+<div class="header">
+    <div class="card">
+        <div class="card_logo">greenhouse</div>
+        <div class="card_text">Все ваши любимые цветы в одном приложений</div>
+        <div class="card_offer">Давайте начнем подбор цветов</div>
+        <div class="card_button" routerLink="/store-page">Перейти в магазин</div>
+    </div>
+</div>
+<div class="content">
+    <div class="title">Популярное</div>
+    <div class="content_list">
+        <div *ngFor="let f of flowers">
+            <app-fower-card [flower]="f"></app-fower-card>
+        </div>
+    </div>
+</div>

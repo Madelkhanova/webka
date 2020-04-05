@@ -1,0 +1,26 @@
+<div class="store">
+    <div class="store_item">
+        <div class="title">Популярное</div>
+        <div class="store_popular__list">
+            <div class="card_item" *ngFor="let p of popular">
+                <app-fower-card [flower]="p"></app-fower-card>
+            </div>
+        </div>
+    </div>
+    <div class="store_item">
+        <div class="title">Для уюта</div>
+        <div class="store_popular__list">
+            <div class="card_item" *ngFor="let h of home">
+                <app-fower-card [flower]="h"></app-fower-card>
+            </div>
+        </div>
+    </div>
+    <div class="store_item">
+        <div class="title">Сезонные</div>
+        <div class="store_popular__list">
+            <div class="card_item" *ngFor="let s of season">
+                <app-fower-card [flower]="s"></app-fower-card>
+            </div>
+        </div>
+    </div>
+</div>

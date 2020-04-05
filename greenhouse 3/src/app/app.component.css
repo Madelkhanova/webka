@@ -1,0 +1,39 @@
+.navbar {
+    height: 70px;
+    padding: 0 2rem;
+    display: grid;
+    align-items: center;
+    background: #00AE71;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    grid-template-columns: 1fr auto auto auto;
+    grid-gap: 3rem;
+}
+.logo {
+    font-family: 'Sacramento', cursive;
+    font-size: 36px;
+    color: #fff;
+}
+.button {
+    font-size: 16px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.747);
+    transition: 0.1s;
+}
+.button:hover:not(.login),
+.active {
+    color: #fff;
+    transition: 0.1s;
+    text-decoration: underline;
+}
+.login {
+    color: #fff;
+    padding: 10px 1rem;
+    background: rgb(4, 189, 124);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+.login:hover {
+    box-shadow: none;
+}
+.login:active {
+    background: rgb(5, 158, 104);
+}
