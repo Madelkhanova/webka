@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { IFlowers } from 'src/assets/interfaces/flowers';
 
@@ -12,5 +12,11 @@ export class FlowersService {
 
   getFlowers(): Observable<IFlowers[]> {
     return this.http.get<IFlowers[]>(this._url)
+  }
+
+  create(flower): Observable<IFlowers> {
+    return this.http.post<IFlowers>(this._url, flower, {
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    })
   }
 }

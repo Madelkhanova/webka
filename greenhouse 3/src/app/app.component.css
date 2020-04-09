@@ -37,3 +37,12 @@
 .login:active {
     background: rgb(5, 158, 104);
 }
+@media (max-width: 630px) {
+    .navbar {
+        padding: 1rem;
+        height: auto;
+        grid-gap: 10px;
+        grid-template-columns: 1fr auto auto;
+        grid-template-rows: auto 1fr;
+    }
+}

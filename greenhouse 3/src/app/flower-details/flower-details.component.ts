@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FlowersService } from '../flowers.service';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-flower-details',
@@ -9,8 +10,13 @@ import { FlowersService } from '../flowers.service';
 })
 export class FlowerDetailsComponent implements OnInit {
   public flower
-  constructor(private route: ActivatedRoute, private flowersService: FlowersService) { }
+  constructor(private route: ActivatedRoute, private flowersService: FlowersService, private userService: UserService) { }
   public id = this.route.snapshot.paramMap.get('id')
+  userData = {
+    name: '',
+    phone: ''
+  }
+
   ngOnInit(): void {
     this.flowersService.getFlowers()
       .subscribe(data => {
@@ -18,4 +24,7 @@ export class FlowerDetailsComponent implements OnInit {
       })
   }
 
+  onOrder(): void {
+    this.userService.order(this.userData)
+  }
 }

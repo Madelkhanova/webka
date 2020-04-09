@@ -4,10 +4,12 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { StorePageComponent } from './store-page/store-page.component';
 import { FlowerDetailsComponent } from './flower-details/flower-details.component';
 import { LoginComponent } from './login/login.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 
 
 const routes: Routes = [
   {path: '', redirectTo: '/home-page', pathMatch: 'full'},
+  {path: 'admin-panel', component: AdminPanelComponent},
   {path: 'login', component: LoginComponent},
   {path: 'home-page', component: HomePageComponent},
   {path: 'store-page', component: StorePageComponent},

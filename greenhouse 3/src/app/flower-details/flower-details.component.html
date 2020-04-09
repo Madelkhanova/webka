@@ -9,13 +9,13 @@
         <form>
             <div class="item">
                 Имя
-                <input type="text">
+                <input type="text" name="name" [(ngModel)]="userData.name">
             </div>
             <div class="item">
                 Номер телефона
-                <input type="text">
+                <input type="text" name="phone" [(ngModel)]="userData.phone">
             </div>
-            <button>Заказать цветы</button>
+            <button (click)="onOrder()">Заказать цветы</button>
         </form>
     </div>
 </div>

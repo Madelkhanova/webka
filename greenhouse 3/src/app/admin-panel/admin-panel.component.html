@@ -1,0 +1,46 @@
+<div class="admin">
+    <form>
+        <div class="title">Admin panel</div>
+        <div class="item">
+            <div class="label">Name</div>
+            <input type="text" name="name" [(ngModel)]="flower.name">
+        </div>
+        <div class="item">
+            <div class="label">Description</div>
+            <textarea name="" id="" cols="30" rows="10" name="description" [(ngModel)]="flower.description"></textarea>
+        </div>
+        <div class="item">
+            <div class="label">Select image</div>
+            <input type="file" name="image" [(ngModel)]="flower.image">
+        </div>
+        <div class="item">
+            <div class="label">Price</div>
+            <input type="text" name="price" [(ngModel)]="flower.price">
+        </div>
+        <div class="item">
+            <div class="label">Light</div>
+            <textarea name="" id="" cols="30" rows="10" name="light" [(ngModel)]="flower.light"></textarea>
+        </div>
+        <div class="item">
+            <div class="label">Temperature</div>
+            <textarea name="" id="" cols="30" rows="10" name="temperature" [(ngModel)]="flower.temperature"></textarea>
+        </div>
+        <div class="item">
+            <div class="label">Humidity</div>
+            <textarea name="" id="" cols="30" rows="10" name="humidity" [(ngModel)]="flower.humidity"></textarea>
+        </div>
+        <div class="item">
+            <div class="label">Watering</div>
+            <textarea name="" id="" cols="30" rows="10" name="watering" [(ngModel)]="flower.watering"></textarea>
+        </div>
+        <div class="item">
+            <div class="label">Fertilizer</div>
+            <textarea name="" id="" cols="30" rows="10" name="fertilizer" [(ngModel)]="flower.fertilizer"></textarea>
+        </div>
+        <div class="item">
+            <div class="label">Transplantation</div>
+            <textarea name="" id="" cols="30" rows="10" name="transplantation" [(ngModel)]="flower.transplantation"></textarea>
+        </div>
+        <button (click)="onCreate()">+ Add new flower</button>
+    </form>
+</div>
