@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { UserService } from '../user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,19 +10,28 @@ import { UserService } from '../user.service';
 export class LoginComponent implements OnInit {
   @Input() login = true
   model = {
-    email: '',
+    username: '',
     password: '',
     password2: ''
   }
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  onSubmit(): void {
-    console.log(this.model)
-    if(this.login==true) this.userService.login(this.model)
-    else this.userService.signup(this.model)
+  onLogin() {
+    this.userService.login(this.model).subscribe(
+      res => {
+        localStorage.setItem('token', res.token)
+        localStorage.setItem('username', this.model.username)
+
+        this.router.navigate(['/home-page'])
+      }
+    )
+  }
+
+  onRegister() {
+    this.userService.signup(this.model).subscribe()
   }
 }

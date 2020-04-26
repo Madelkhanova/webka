@@ -24,7 +24,7 @@ form {
 button {
     font-size: 16px;
     color: #fff;
-    padding: 10px 0;
+    padding: 10px 1rem;
     border: none;
     background: #00AE71;
     display: grid;
@@ -42,4 +42,14 @@ button:hover {
 }
 button:active {
     background: rgba(3, 146, 96, 0.781);
+}
+.fl_item {
+    padding: 1rem;
+    border-bottom: 1px solid #868686;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    grid-gap: 1rem;
+}
+.fl_item__title {
+
 }

@@ -11,7 +11,7 @@
         </div>
         <div class="item">
             <div class="label">Select image</div>
-            <input type="file" name="image" [(ngModel)]="flower.image">
+            <input type="text" name="image" [(ngModel)]="flower.image">
         </div>
         <div class="item">
             <div class="label">Price</div>
@@ -23,7 +23,7 @@
         </div>
         <div class="item">
             <div class="label">Temperature</div>
-            <textarea name="" id="" cols="30" rows="10" name="temperature" [(ngModel)]="flower.temperature"></textarea>
+            <textarea name="" id="" cols="30" rows="10" name="temp" [(ngModel)]="flower.temp"></textarea>
         </div>
         <div class="item">
             <div class="label">Humidity</div>
@@ -38,9 +38,27 @@
             <textarea name="" id="" cols="30" rows="10" name="fertilizer" [(ngModel)]="flower.fertilizer"></textarea>
         </div>
         <div class="item">
-            <div class="label">Transplantation</div>
-            <textarea name="" id="" cols="30" rows="10" name="transplantation" [(ngModel)]="flower.transplantation"></textarea>
+            <div class="label">Transplantatio</div>
+            <textarea name="" id="" cols="30" rows="10" name="transplantatio"
+                [(ngModel)]="flower.transplantatio"></textarea>
         </div>
-        <button (click)="onCreate()">+ Add new flower</button>
+        <div *ngIf="!editable">
+            <button (click)="onCreate()">+ Add new flower</button>
+        </div>
+        <div *ngIf="editable">
+            <button (click)="onEdit()">Edit</button>
+        </div>
     </form>
+    <hr />
+    <div class="fl">
+        <div *ngFor="let f of flowers">
+            <div class="fl_item">
+                <div class="fl_item__title">
+                    {{f.name}}
+                </div>
+                <div class="edit" (click)="onEditOpen(f.id)">Редактировать</div>
+                <div class="delete" (click)="onDelete(f.id)">Удалить</div>
+            </div>
+        </div>
+    </div>
 </div>

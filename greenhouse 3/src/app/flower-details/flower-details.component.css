@@ -62,6 +62,38 @@ button:active {
 .content_item {
     width: 80%;
 }
+
+
+.comment_title {
+    font-size: 20px;
+    padding: 0.5rem 0;
+    margin-left: 1rem;
+}
+.comments_write {
+    display: grid;
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+.comments_write__item {
+    display: grid;
+}
+.comments_write__button button {
+    padding: 10px 1rem;
+}
+p{
+    margin: 0;
+}
+h4 {
+    margin: 0;
+}
+.comments_read {
+    display: grid;
+}
+.commnet_item {
+    padding: 1rem;
+    border: 1px solid #dedede;
+    margin: 1rem
+}
 @media (max-width: 630px) {
     .header {
         padding: 2rem 1rem;

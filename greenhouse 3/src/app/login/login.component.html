@@ -4,13 +4,13 @@
             <div class="title">Войти</div>
             <div class="item">
                 <div class="label">E-mail</div>
-                <input type="text" name="email" [(ngModel)]="model.email">
+                <input type="text" name="username" [(ngModel)]="model.username">
             </div>
             <div class="item">
                 <div class="label">Пароль</div>
                 <input type="password" name="password" [(ngModel)]="model.password">
             </div>
-            <button (click)="onSubmit()">Войти</button>
+            <button (click)="onLogin()">Войти</button>
             <div class="change" (click)="login = false">Зарегистрироваться</div>
         </form>
     </div>
@@ -20,7 +20,7 @@
             <div class="title">Регистрация</div>
             <div class="item">
                 <div class="label">E-mail</div>
-                <input type="text" name="email" [(ngModel)]="model.email">
+                <input type="text" name="username" [(ngModel)]="model.username">
             </div>
             <div class="item">
                 <div class="label">Пароль</div>
@@ -30,7 +30,7 @@
                 <div class="label">Подтвердить пароль</div>
                 <input type="password" name="password2" [(ngModel)]="model.password2">
             </div>
-            <button (click)="onSubmit()">Создать</button>
+            <button (click)="onRegister()">Создать</button>
             <div class="change" (click)="login = true">Войти</div>
         </form>
     </div>

@@ -2,6 +2,11 @@
   <div class="logo">greenhouse</div>
   <div class="button" routerLink="/home-page" routerLinkActive="active">Главная страница</div>
   <div class="button" routerLink="/store-page" routerLinkActive="active">Магазин</div>
-  <div class="button login" routerLink="/login">Присоединиться</div>
+  <div *ngIf="!logged">
+    <div class="button login" routerLink="/login">Присоединиться</div>
+  </div>
+  <div *ngIf="logged">
+    <div class="button login" (click)="onLogout()">Выйти</div>
+  </div>
 </div>
 <router-outlet></router-outlet>

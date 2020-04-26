@@ -1,5 +1,5 @@
 export interface IFlowers {
-    id: string,
+    id?: number,
     name: string,
     price: string,
     description: string,
@@ -9,5 +9,5 @@ export interface IFlowers {
     humidity: string,
     watering: string,
     fertilizer: string,
-    transplantation: string
+    transplantatio: string
 }

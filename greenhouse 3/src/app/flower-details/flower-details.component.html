@@ -42,6 +42,30 @@
     </div>
     <div class="content_item">
         <div class="title">Пересадка</div>
-        {{ flower.transplantation }}
+        {{ flower.transplantatio }}
+    </div>
+</div>
+
+
+<div class="comment_title">Оставить комментарий</div>
+<div class="comments_write">
+    <div class="comments_write__item">
+        <div class="commnets_write__item___label">Как Вас зовут?</div>
+        <input type="text" name='name' [(ngModel)]="commentData.name">
+    </div>
+    <div class="comments_write__item">
+        <div class="commnets_write__item___label">Ваш комментарий</div>
+        <textarea id="" cols="30" rows="10" name='text' [(ngModel)]="commentData.text"></textarea>
+    </div>
+    <div class="comments_write__button"><button (click)="onComment()">Оставить комментарий</button></div>
+</div>
+<hr/>
+<div class="comment_title">Что пишут другие пользователи?</div>
+<div class="comments_read">
+    <div *ngFor="let c of comments">
+        <div class="commnet_item">
+            <h4>{{c.name}}</h4>
+            <p>{{c.text}}</p>
+        </div>
     </div>
 </div>
